@@ -1,0 +1,22 @@
+{
+  "name": "hope-sundays",
+  "version": "1.0.0",
+  "description": "Prayer Request Manager for churches during COVID-19",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aneme1038/hope-sundays.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aneme1038/hope-sundays/issues"
+  },
+  "homepage": "https://github.com/aneme1038/hope-sundays#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
