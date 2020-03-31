@@ -19,6 +19,6 @@ const churchSchema = Schema({
   prayerRequests: [{ type: Schema.Types.ObjectId, ref: 'Prayer'}]
 })
 
-const User = mongoose.model('User', userSchema);
+const Church = mongoose.model('Church', churchSchema);
 
-module.exports = User;
+module.exports = Church;
