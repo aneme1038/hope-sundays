@@ -3,22 +3,26 @@
 //=============
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const User = require('../models/users.js');
+const Church = require('../models/church.js');
 
 //=============
 // MODEL SCHEMA
 //=============
 
 const prayerSchema = Schema({
-  name: String,
-  church: String,
-  age: Number,
-  gender: String,
+  author: [{ type: Schema.Types.ObjectId, ref: 'User'}],
+  church: [{ type: Schema.Types.ObjectId, ref: 'Church'}],
   category: String,
   prayerRequest: String,
-  timeSensitive: Boolean
+  timeSensitive: Boolean,
+  status: String,
+  pending: Boolean,
+  inProgress: Boolean,
+  completed: Boolean
   //add additional information below
 })
 
-const User = mongoose.model('User', userSchema);
+const Prayer = mongoose.model('Prayer', prayerSchema);
 
-module.exports = User;
+module.exports = Prayer;
